@@ -576,7 +576,7 @@
                 card.addEventListener('drop', handleDrop);
                 card.addEventListener('dragend', handleDragEnd);
 
-                let tagHtml = spot.tag ? `<span class="bg-[#FFF2EE] text-[#FF8E75] text-[9px] px-1.5 py-0.5 rounded font-bold">${spot.tag}</span>` : '';
+                let tagHtml = spot.tag ? `<span class="bg-[#FFF2EE] text-[#FF8E75] text-[11px] px-1.5 py-0.5 rounded font-bold">${spot.tag}</span>` : '';
                 let mapsHtml = spot.maps ? `<a href="${spot.maps}" target="_blank" class="text-gray-400 hover:text-[#FF8E75] transition-colors"><i class="fa-solid fa-location-dot"></i></a>` : '';
                 let linkHtml = spot.link ? `<a href="${spot.link}" target="_blank" class="text-gray-400 hover:text-[#FF8E75] transition-colors"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>` : '';
 
@@ -590,8 +590,8 @@
                             <h4 class="font-bold text-xs text-[#333333] truncate">${spot.name}</h4>
                             ${tagHtml}
                         </div>
-                        ${spot.time ? `<p class="text-[10px] text-[#9E8E8C] flex items-center gap-1"><i class="fa-regular fa-clock text-[9px]"></i>${spot.time}</p>` : ''}
-                        ${spot.note ? `<p class="text-[11px] text-[#7A6A68] bg-[#FFFDFB] p-2 rounded-xl border border-[#FFF2EE] mt-1.5 leading-relaxed">${spot.note}</p>` : ''}
+                        ${spot.time ? `<p class="text-[12px] text-[#9E8E8C] flex items-center gap-1"><i class="fa-regular fa-clock text-[11px]"></i>${spot.time}</p>` : ''}
+                        ${spot.note ? `<p class="text-[13px] text-[#7A6A68] bg-[#FFFDFB] p-2 rounded-xl border border-[#FFF2EE] mt-1.5 leading-relaxed">${spot.note}</p>` : ''}
                     </div>
                     <div class="flex flex-col justify-between items-end text-xs pt-0.5">
                         <div class="flex gap-2">
@@ -599,8 +599,8 @@
                             ${linkHtml}
                         </div>
                         <div class="flex gap-1 mt-4">
-                            <button onclick="openEditModal(${index})" class="text-gray-300 hover:text-blue-400 p-1"><i class="fa-regular fa-pen-to-square text-[11px]"></i></button>
-                            <button onclick="deleteSpot(${index})" class="text-gray-300 hover:text-red-400 p-1"><i class="fa-regular fa-trash-can text-[11px]"></i></button>
+                            <button onclick="openEditModal(${index})" class="text-gray-300 hover:text-blue-400 p-1"><i class="fa-regular fa-pen-to-square text-[13px]"></i></button>
+                            <button onclick="deleteSpot(${index})" class="text-gray-300 hover:text-red-400 p-1"><i class="fa-regular fa-trash-can text-[13px]"></i></button>
                         </div>
                     </div>
                 `;
@@ -721,17 +721,17 @@
                 li.innerHTML = `
                     <div class="flex flex-col gap-0.5">
                         <div class="flex items-center gap-1.5 flex-wrap">
-                            <span class="bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded text-[9px] font-medium">${exp.date}</span>
-                            <span class="bg-[#FFF2EE] text-[#FF8E75] px-1.5 py-0.5 rounded text-[9px] font-bold">${exp.paymethod}</span>
+                            <span class="bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded text-[12px] font-medium">${exp.date}</span>
+                            <span class="bg-[#FFF2EE] text-[#FF8E75] px-1.5 py-0.5 rounded text-[12px] font-bold">${exp.paymethod}</span>
                             <span class="font-medium text-[#4A3E3D]">${exp.item}</span>
                         </div>
                     </div>
                     <div class="flex items-center gap-3">
                         <div class="text-right">
                             <span class="font-bold block text-[#333333]">₩ ${exp.amount.toLocaleString()}</span>
-                            <span class="text-[10px] text-gray-400 block">≈ NT$ ${twdPrice}</span>
+                            <span class="text-[12px] text-gray-400 block">≈ NT$ ${twdPrice}</span>
                         </div>
-                        <button onclick="deleteExpense(${exp.id})" class="text-gray-300 hover:text-red-400 cursor-pointer p-1"><i class="fa-regular fa-trash-can text-[11px]"></i></button>
+                        <button onclick="deleteExpense(${exp.id})" class="text-gray-300 hover:text-red-400 cursor-pointer p-1"><i class="fa-regular fa-trash-can text-[12px]"></i></button>
                     </div>
                 `;
                 listEl.appendChild(li);
@@ -782,7 +782,7 @@
                         <input type="checkbox" onchange=\"togglePackItem('${category}', ${item.id})\" ${item.checked ? 'checked' : ''} class="w-4 h-4 shrink-0 ${accentColor}">
                         <span class="truncate ${item.checked ? 'line-through text-gray-400' : 'text-[#4A3E3D]'}" title="${item.text}">${item.text}</span>
                     </label>
-                    <button onclick=\"deletePackItem('${category}', ${item.id})\" class="text-gray-300 hover:text-red-400 transition-colors p-1 ml-2 cursor-pointer"><i class="fa-regular fa-trash-can text-[11px]"></i></button>
+                    <button onclick=\"deletePackItem('${category}', ${item.id})\" class="text-gray-300 hover:text-red-400 transition-colors p-1 ml-2 cursor-pointer"><i class="fa-regular fa-trash-can text-[12px]"></i></button>
                 `;
                 listEl.appendChild(li);
             });
